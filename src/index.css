@@ -1,1 +1,139 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&display=swap');
+body{
+    font-family: 'Manrope', sans-serif;
+    background-color: #16232D;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+a.active{
+    border-bottom: 1px solid white;
+}
+.navbar{
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    transform: translateX(50%);
+    right: 50%;
 
+}
+.navbar__logo{
+    font-size: 18px;
+}
+.navbar__links{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: auto;
+    margin-left: 10vw; 
+
+}
+.navbar__links li{
+    margin-right: 20px;
+    color: #c6d0d7;
+}
+.navbar__cart{
+    background-color: #fff;
+    color: #16232D;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+.container{
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 10px;
+   
+}
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+
+}
+.hero__text h1{
+    text-transform: uppercase;
+    color: #707B81;
+    font-size: 3rem;
+}
+.hero__text h1 span{
+    color: #fff;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+.card{
+    border-radius: 15px;
+    overflow: hidden;
+    /* height: 480px; */
+
+
+}
+.card p{
+    font-size: 13px;
+    color: #707B81;
+    margin-top: 10px;
+}
+.card__image{
+    width: 100%;
+   
+    
+}
+.card__price{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+}
+.card__price p {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.card__image img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+.card__btn{
+    background: none;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: #16232D;
+    padding: 10px 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+}
+.card__btn span{
+    font-size: 1rem;
+    display: block;
+}
+.card__btn span:hover{
+    color:#707B81;
+    cursor: pointer;
+}
