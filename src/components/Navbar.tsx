@@ -1,7 +1,11 @@
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { useShoppingCart } from '../context/ShoppingCartContext'
+
 
 const Navbar = () => {
+  const { openCart, cartQuantity } = useShoppingCart()
   return (
+    <>
       <nav className="navbar">
       <div className="navbar__logo"> <Link to={'/'}>DokCart</Link> </div>
       <ul className="navbar__links">
@@ -10,10 +14,12 @@ const Navbar = () => {
         <li><Link to={'/contact'}>Connect</Link> </li>
         <li><Link to={'/'}>022</Link> </li>
       </ul>
-      <div className="navbar__cart">
-        Cart(<span className="navbar__cart__number">0</span>)
+      <div className="navbar__cart" onClick={openCart}>
+        Cart(<span className="navbar__cart__number">{cartQuantity}</span>)
       </div>
     </nav>
+    {/* <ShoppingCart/> */}
+    </>
   )
 }
 

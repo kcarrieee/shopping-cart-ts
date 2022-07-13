@@ -1,9 +1,8 @@
 
 import Product from "../components/Product";
 import Hero from "../components/Hero";
-import { useState } from 'react'
 import { useQuery } from 'react-query'
-import { CartItem, Props } from '../types/types'
+import { CartItem } from '../types/types'
 
 
 

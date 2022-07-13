@@ -1,7 +1,13 @@
-import { Props,CartItem } from '../types/types'
+import { useShoppingCart } from '../context/ShoppingCartContext'
+import { CartItem } from '../types/types'
+import {formatCurrency} from '../utils/formatCurrency'
 
 
-const Product = ({id, image,name,description,price }:CartItem): JSX.Element => {
+const Product = ({ id, image,name,description,price }:CartItem): JSX.Element => {
+  
+  const {getQuantity, incQuantity, decQuantity} = useShoppingCart()
+  const num = getQuantity(id)
+  
   return (
     
          <div className="card" key={id}>
@@ -16,10 +22,10 @@ const Product = ({id, image,name,description,price }:CartItem): JSX.Element => {
             {description}
           </p>
           <div className="card__price">
-            <p>${price}</p>
-            <button className="card__btn">
-              <span>-</span><span>0</span><span>+</span>
-            </button>
+            <p>{formatCurrency(price)}</p>
+            <div>
+              {num === 0 ? <button className="card__btn" onClick={()=>incQuantity(id)}>Add to cart</button> :(<button className="card__btn"><span onClick={()=>decQuantity(id)}>-</span><span>{num}</span><span onClick={()=>incQuantity(id)}>+</span></button>) }
+            </div>
           </div>
         </div>
    
