@@ -52,6 +52,7 @@ a.active{
     color: #16232D;
     padding: 10px 20px;
     border-radius: 15px;
+    cursor: pointer;
 }
 .container{
     width: 100%;
@@ -127,7 +128,12 @@ a.active{
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
 
+}
+.card__btn:hover{
+    background-color: #dce2e6;
 }
 .card__btn span{
     font-size: 1rem;

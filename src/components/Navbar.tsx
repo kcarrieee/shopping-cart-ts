@@ -18,7 +18,6 @@ const Navbar = () => {
         Cart(<span className="navbar__cart__number">{cartQuantity}</span>)
       </div>
     </nav>
-    {/* <ShoppingCart/> */}
     </>
   )
 }
