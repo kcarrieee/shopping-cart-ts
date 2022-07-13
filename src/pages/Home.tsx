@@ -6,6 +6,7 @@ import { CartItem } from '../types/types'
 
 
 
+
 const getProducts = async(): Promise<CartItem[]> =>{
   return await (await fetch('https://62ca807c1eaf3786ebac401d.mockapi.io/products')).json()
 }

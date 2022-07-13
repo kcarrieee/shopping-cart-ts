@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Connect from "./pages/Connect";
 import About from "./pages/About";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
+import Footer from "./components/Footer";
 
 
 
@@ -18,6 +19,7 @@ function App() {
         <Route path='/about' element={<About/>}/>
       </Routes>
     </BrowserRouter>
+    <Footer/>
     </ShoppingCartProvider>
   );
 }

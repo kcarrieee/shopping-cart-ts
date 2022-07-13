@@ -17,12 +17,15 @@ const ShoppingCart = ({isOpen}:Props) => {
             <></>
         )
     }
+  
   return (
     <div className='shopping-cart'> 
     <div className='shopping-cart__title'>
         <h2>Cart</h2>
         <button onClick={closeCart} className='close-btn' >close</button>
     </div>
+    {cartItems.length === 0 && <div className='empty-cart-msg'> <div> <h3>Cart is empty</h3>
+    <p>See our latest products now!</p> </div> </div>}
     <div className='shopping-cart__items'>
         {cartItems.map(item =>{
             return(

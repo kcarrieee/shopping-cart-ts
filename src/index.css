@@ -70,7 +70,6 @@ a.active{
 
 }
 .hero__text h1{
-    text-transform: uppercase;
     color: #707B81;
     font-size: 3rem;
 }
@@ -80,7 +79,7 @@ a.active{
 .products{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px;
+    gap: 50px;
 }
 .card{
     border-radius: 15px;
@@ -103,6 +102,7 @@ a.active{
    display: flex;
    justify-content: space-between;
    align-items: center;
+   margin-top: 20px;
 
 }
 .card__price p {
@@ -128,6 +128,7 @@ a.active{
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.5s ease;
 
@@ -172,6 +173,7 @@ a.active{
     font-size: 16px;
     cursor: pointer;
     transition: color 0.3s ease;
+    color: #000;
 }
 .close-btn:hover{
     color:#707B81;
@@ -239,4 +241,19 @@ a.active{
 }
 .check-out p{
     color: #000;
+}
+.empty-cart-msg{
+    height: 80%;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.footer{
+    color: #263a49;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 40px;
 }
