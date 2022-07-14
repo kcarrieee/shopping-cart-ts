@@ -77,6 +77,13 @@ a.active{
     margin-left: 10vw; 
 
 }
+@media screen and (max-width: 600px) {
+    .navbar__links{
+        display: none;
+    }
+
+    
+}
 .navbar__links li{
     margin-right: 20px;
     color: #c6d0d7;
