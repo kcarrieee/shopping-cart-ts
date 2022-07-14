@@ -12,6 +12,7 @@ const Product = ({ id, image,name,description,price }:CartItem): JSX.Element => 
     
          <div className="card" key={id}>
           <div className="card__image">
+            {num === 0 ? null : (<div className='overlay'> <p>{num}</p></div>)}
             <img
               src={image}
               alt="chair"

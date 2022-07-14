@@ -13,7 +13,7 @@ const getProducts = async(): Promise<CartItem[]> =>{
 
 const Home = () => {
   const {data, isLoading, error} = useQuery<CartItem[]>('products', getProducts)
-  if(isLoading) return <p>Loading...</p>
+  if(isLoading) return <div className="loading"><div className="inner-loader"></div></div>
   if(error) return <p>Somehting went wrong</p>
   
 
