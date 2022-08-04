@@ -120,12 +120,11 @@ a.active{
 .products{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 50px;
+    gap: 80px;
 }
 .card{
     border-radius: 15px;
     overflow: hidden;
-
 
 }
 .card p{
@@ -138,8 +137,14 @@ a.active{
     position: relative;
     border-radius: 15px;
     overflow: hidden;
-}
 
+}
+@media screen and (max-width:700px) {
+    .card__image {
+            height: 300px;
+            margin-bottom: 10px;
+        }
+}
 .overlay{
     width: 100%;
     height: 100%;
@@ -212,7 +217,7 @@ a.active{
     width: 50%;
     background-color: #c6d0d7;
     z-index: 1000;
-    height: 100vh;
+    height: 150vh;
     padding: 25px 40px;
 }
 @media screen and (max-width: 660px) {
@@ -243,14 +248,18 @@ a.active{
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+   
 }
+
 .cart__item__img{
     width: 200px;
     height: 150px;
     overflow: hidden;
     border-radius: 15px;
     object-fit: cover;
+   
 }
+
 .cart__item__img img{
     width: 100%;
 }
@@ -278,6 +287,26 @@ a.active{
     cursor: pointer;
     transition: all 0.5s ease;
 }
+ @media screen and (max-width:700px) {
+    .cart__item {
+        align-items: flex-start;
+     }
+
+    .cart__item__img {
+        width: 80px;
+        height: 80px;
+     }
+    .product__desc {
+       padding-right: 5px;
+    }
+    .total {
+        color: #000;
+        display: flex;
+        align-items: flex-start;
+        gap: 50px;
+    }
+
+ }
 .removeAll-btn:hover{
     background-color: #707B81;
 }

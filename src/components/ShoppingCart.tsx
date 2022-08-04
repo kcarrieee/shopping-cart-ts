@@ -9,7 +9,7 @@ type Props={
 }
 
 const ShoppingCart = ({isOpen}:Props) => {
-    const {closeCart,cartItems, cartQuantity} = useShoppingCart()
+    const {closeCart,cartItems} = useShoppingCart()
     const {data} = useQuery<CartItem[]>('products', getProducts)
 
     if(!isOpen){
